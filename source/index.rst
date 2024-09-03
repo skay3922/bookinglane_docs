@@ -39,4 +39,3 @@ The response will contain the result of the top-up operation.
    :caption: Contents:
 
    corporate_account
-
