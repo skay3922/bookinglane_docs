@@ -1,3 +1,3 @@
 
-Bookinglane documentation
-=========================
+Corporate account
+=================
