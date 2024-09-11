@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Bookinglane'
-copyright = '2024, Qairat'
+copyright = '2024, Bookinglane'
 author = 'Bookinglane'
-release = 'Bookinglane'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -26,3 +26,14 @@ exclude_patterns = []
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+html_theme_options = {
+    'navigation_depth': 4,  # Глубина вложенных заголовков в боковом меню
+    'collapse_navigation': False,  # Не сворачивать вложенные разделы
+    'titles_only': False,   # Отображать не только заголовки
+}
+
+html_sidebars = {
+    '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'],
+}
+
