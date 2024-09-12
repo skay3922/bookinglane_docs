@@ -35,13 +35,8 @@ Create an corporate account and learn how to start using API Bookinglane.
     itinerary/cancel
 
 .. toctree::
-    :hidden:
-    :caption: Additional "hidden" Pages
+    :caption: Top up Balance
+    :titlesonly:   
+    
+    top-up-balance
 
-    placeholder-three
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   placeholder-two
