@@ -26,7 +26,7 @@ Example:
 
 **Endpoint**::
 
-   POST /bookinglane-api/v1/external/top-up-balance
+   POST /api/v1/external/top-up-balance
 
 **Body**::
 
@@ -38,8 +38,8 @@ Example:
        "CVV": "123",
        "Nickname": "Personal Card",
        "IsMain": true,
-       "AddressZip": "72200",
-       "Balance": 15000
+       "AddressZip": "60604",
+       "Balance": 1000
    }
 
 **Request**::
@@ -55,7 +55,7 @@ Example:
          "CVV": "123",
          "Nickname": "Personal Card",
          "IsMain": true,
-         "AddressZip": "72200",
-         "Balance": 15000
+         "AddressZip": "60604",
+         "Balance": 1000
       }'
 

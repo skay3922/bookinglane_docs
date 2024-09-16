@@ -10,6 +10,7 @@ Create an corporate account and learn how to start using API Bookinglane.
     corporate-account/create
     corporate-account/update
     corporate-account/detail
+    corporate-account/get-by-id
     corporate-account/delete
 
 .. toctree::
