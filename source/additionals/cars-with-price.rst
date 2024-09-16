@@ -1,11 +1,11 @@
 Car with price
 ==============
 
-### POST /api/v1/external/cars-with-price
+### ``POST /api/v1/external/cars-with-price``
 
 This endpoint is used to retrieve information about cars with their prices for external use.
 
-#### Request Body
+**Request Body**
 
 - ``country2LetterCode`` (string): The country code.
   

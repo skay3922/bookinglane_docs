@@ -59,3 +59,7 @@ Example:
          "Balance": 1000
       }'
 
+**Response**
+
+      Status: 200
+      Content-Type: application/json
