@@ -34,7 +34,7 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   POST /api/v1/external/create-corporate-account
 
 **Body**::
 
@@ -52,20 +52,18 @@ Example:
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      curl --location 'https://mgrdev2.bookinglane.com/api/v1/external/create-corporate-account' \
+      --form 'Name="Company000"' \
+    --form 'Discount="10"' \
+    --form 'IsReservationPaymentRequired="false"' \
+    --form 'Logo=@"/C:/Users/Qairat/Downloads/Default_two_cartoon_playing_funny_panda_1.jpg"' \
+    --form 'Logo=@"/Users/qairat/Desktop/Screenshot 2024-08-23 at 8.43.19 PM.png"' \
+    --form 'User.FirstName="Qairat"' \
+    --form 'User.LastName="Soodombaev"' \
+    --form 'User.Email="skay39234@gmail.com"' \
+    --form 'User.PhoneNumber="+996500150110"' \
+    --form 'User.Role="Admin"' \
+    --form 'User.Password="Company123\!"'
 
 **Response**
 

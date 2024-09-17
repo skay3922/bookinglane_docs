@@ -1,7 +1,7 @@
 Update reservation
 ==================
 
-This endpoint allows you to make a reservation for an external service by submitting the required details.
+This endpoint allows you to update a reservation for an external service by submitting the required details.
 
 Request Body Parameters
 -----------------------
@@ -90,5 +90,8 @@ Example:
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+.. code-block:: text
+
+    Status: 200
+    Content-Type: application/json
+

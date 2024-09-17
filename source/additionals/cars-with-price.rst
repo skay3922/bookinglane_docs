@@ -38,3 +38,47 @@ This endpoint is used to retrieve information about cars with their prices for e
 - ``passengersQuantity`` (number): The quantity of passengers.
   
 - ``isAirportPickupIncluded`` (boolean): Indicates if airport pickup is included.
+
+Example:
+--------
+
+**Endpoint**::
+
+   POST /api/v1/external/cars-with-price
+   
+**Body**::
+
+   {
+       "CardId": "",
+       "CardNumber": "4242424242424242",
+       "NameOnCard": "John Doe",
+       "ExpirationDate": "2025-12-31T00:00:00",
+       "CVV": "123",
+       "Nickname": "Personal Card",
+       "IsMain": true,
+       "AddressZip": "60604",
+       "Balance": 1000
+   }
+
+**Request**::
+
+      curl --location '/bookinglane-api/v1/external/top-up-balance' \
+      --header 'Content-Type: application/json' \
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
+      --data '{
+         "CardId": "",
+         "CardNumber": "4242424242424242",
+         "NameOnCard": "John Doe",
+         "ExpirationDate": "2025-12-31T00:00:00",
+         "CVV": "123",
+         "Nickname": "Personal Card",
+         "IsMain": true,
+         "AddressZip": "60604",
+         "Balance": 1000
+      }'
+
+**Response**
+
+      Status: 200
+      Content-Type: application/json
+

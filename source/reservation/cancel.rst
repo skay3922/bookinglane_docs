@@ -1,6 +1,16 @@
 Cancel reservation
 ==================
 
+This endpoint is used to cancel a reservation.
+
+**Request Body**
+
+- ``Id`` (text): The ID of the reservation to be deleted.
+
+**Response**
+
+The response will indicate the success or failure of the deletion operation.
+
 Example:
 --------
 

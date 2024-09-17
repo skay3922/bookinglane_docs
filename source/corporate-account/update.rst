@@ -19,7 +19,7 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   PUT api/v1/external/update-corporate-account
 
 **Body**::
 

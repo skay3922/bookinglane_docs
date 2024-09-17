@@ -1,6 +1,16 @@
 Delete itinerary
 ================
 
+This endpoint is used to delete a itinerary.
+
+**Request Body**
+
+- ``Id`` (text): The ID of the itinerary to be deleted.
+
+**Response**
+
+The response will indicate the success or failure of the deletion operation.
+
 Example:
 --------
 

@@ -32,7 +32,7 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   GET /api/v1/external/itinerary/{id}
 
 **Body**::
 

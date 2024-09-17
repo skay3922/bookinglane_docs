@@ -22,7 +22,7 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   POST /api/v1/external/create-itinerary
 
 **Body**::
 

@@ -81,7 +81,7 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   POST /api/v1/external/get-itineraries?SearchParam=event
 
 **Body**::
 

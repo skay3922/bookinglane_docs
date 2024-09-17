@@ -39,3 +39,47 @@ The response is a JSON array containing objects with the following properties:
         }
       }
     ]
+
+Example:
+--------
+
+**Endpoint**::
+
+   GET /api/v1/external/airlines
+   
+**Body**::
+
+   {
+       "CardId": "",
+       "CardNumber": "4242424242424242",
+       "NameOnCard": "John Doe",
+       "ExpirationDate": "2025-12-31T00:00:00",
+       "CVV": "123",
+       "Nickname": "Personal Card",
+       "IsMain": true,
+       "AddressZip": "60604",
+       "Balance": 1000
+   }
+
+**Request**::
+
+      curl --location '/bookinglane-api/v1/external/top-up-balance' \
+      --header 'Content-Type: application/json' \
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
+      --data '{
+         "CardId": "",
+         "CardNumber": "4242424242424242",
+         "NameOnCard": "John Doe",
+         "ExpirationDate": "2025-12-31T00:00:00",
+         "CVV": "123",
+         "Nickname": "Personal Card",
+         "IsMain": true,
+         "AddressZip": "60604",
+         "Balance": 1000
+      }'
+
+**Response**
+
+      Status: 200
+      Content-Type: application/json
+

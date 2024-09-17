@@ -31,7 +31,7 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   POST /api/v1/external/corporate-account/{id}
 
 **Body**::
 
