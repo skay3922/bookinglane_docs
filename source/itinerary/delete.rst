@@ -1,5 +1,5 @@
-Delete itinerary
-================
+Delete an itinerary
+===================
 
 This endpoint is used to delete a itinerary.
 

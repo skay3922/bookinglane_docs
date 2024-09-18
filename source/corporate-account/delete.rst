@@ -1,5 +1,5 @@
-Delete corporate account
-========================
+Delete a corporate account
+==========================
 
 This endpoint is used to delete a corporate account.
 

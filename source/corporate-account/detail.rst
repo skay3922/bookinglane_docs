@@ -1,5 +1,5 @@
-Detail corporate account
-========================
+Obtain corporate account details
+================================
 
 This endpoint makes an HTTP GET request to retrieve the details of an external booking.
 

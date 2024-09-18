@@ -1,5 +1,5 @@
-Detail itinerary
-================
+Obtain itinerary details
+========================
 
 The endpoint retrieves the itinerary details for a specific itinerary ID.
 
@@ -34,36 +34,10 @@ Example:
 
    GET /api/v1/external/itinerary/{id}
 
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
-
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      curl --location /api/v1/external/itinerary/150190' \
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
 **Response**
 

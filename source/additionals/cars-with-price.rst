@@ -1,5 +1,5 @@
-Car with price
-==============
+View vehicle prices
+===================
 
 ``POST /api/v1/external/cars-with-price``
 

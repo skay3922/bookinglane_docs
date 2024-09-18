@@ -1,5 +1,5 @@
-Detail reservation
-==================
+Obtain reservation details
+==========================
 
 This API endpoint makes an HTTP GET request to retrieve details of a specific reservation with the ID from the external system. No request body is required for this request.
 

@@ -1,4 +1,4 @@
-Top up Balance
+Top up balance
 ==============
 
 This endpoint allows you to top up the balance using the provided card details.

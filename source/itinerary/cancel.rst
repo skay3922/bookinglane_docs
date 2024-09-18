@@ -1,5 +1,5 @@
-Cancel itinerary
-==================
+Cancel an itinerary
+===================
 
 Example:
 --------

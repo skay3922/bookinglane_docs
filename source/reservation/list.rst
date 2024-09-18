@@ -1,5 +1,5 @@
-Reservation List
-================
+View a reservation list
+=======================
 
 This endpoint makes an HTTP GET request to retrieve a list of external reservations from the server. The response will be in JSON format and will include details such as reservation ID, booking type, round trip status, order and total sums, currency information, passenger quantity, car details, order address, airport pickup details, flight numbers, seat and luggage counts, payment and order status, and country code.
 

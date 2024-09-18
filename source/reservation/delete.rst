@@ -1,5 +1,5 @@
-Delete reservation
-==================
+Delete a reservation
+====================
 
 This endpoint is used to delete a reservation.
 

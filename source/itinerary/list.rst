@@ -1,5 +1,5 @@
-Itinerary List
-==============
+View an itinerary list
+======================
 
 The API endpoint ``GET /api/v1/external/get-itineraries`` is used to retrieve itineraries based on the search parameter provided.
 
@@ -83,20 +83,6 @@ Example:
 
    POST /api/v1/external/get-itineraries?SearchParam=event
 
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
-
 **Request**::
 
       curl --location '/bookinglane-api/v1/external/top-up-balance' \
@@ -114,7 +100,18 @@ Example:
          "Balance": 1000
       }'
 
-**Response**
+**Response**::
 
-      Status: 200
-      Content-Type: application/json
+    {
+        "id": 150190,
+        "number": "774376",
+        "eventName": "Corporate Meeting",
+        "startDate": "2024-12-12T00:00:00",
+        "endDate": "2024-12-12T00:00:00",
+        "profitMargin": 10.0,
+        "status": 0,
+        "netDue": 0.0,
+        "totalAmount": 0.0,
+        "reservationsHistory": []
+    }
+

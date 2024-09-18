@@ -1,5 +1,5 @@
-Update reservation
-==================
+Update a reservation
+====================
 
 This endpoint allows you to update a reservation for an external service by submitting the required details.
 

@@ -1,5 +1,5 @@
-Update corporate account
-========================
+Update a corporate account
+==========================
 
 This endpoint is used to update a corporate account.
 

@@ -1,7 +1,7 @@
 Get started
 ===========
 
-Create an corporate account and learn how to start using API Bookinglane.
+Create a corporate account and learn how to start using Bookinglane API.
 
 Development server endpoint:
 
@@ -49,13 +49,13 @@ Production server endpoint:
     reservation-with-itinerary/create 
 
 .. toctree::
-    :caption: Top up Balance
+    :caption: Top up balance
     :titlesonly:   
     
     top-up-balance
 
 .. toctree::
-    :caption: Additionals
+    :caption: Additional options
     :titlesonly:
     
     additionals/cars-with-price

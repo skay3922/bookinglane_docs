@@ -1,5 +1,5 @@
-Create corporate account
-========================
+Create a corporate account
+==========================
 
 This endpoint allows you to create a corporate account by submitting the required information.
 

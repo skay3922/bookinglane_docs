@@ -1,5 +1,5 @@
-Create reservation
-==================
+Create a reservation
+====================
 
 This endpoint allows you to make a reservation for an external service by submitting the required details.
 

@@ -1,5 +1,5 @@
-Airlines
-========
+View airlines list
+==================
 
 This endpoint retrieves a list of external airlines.
 

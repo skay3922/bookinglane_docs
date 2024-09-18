@@ -1,5 +1,5 @@
-Cancel reservation
-==================
+Cancel a reservation
+====================
 
 This endpoint is used to cancel a reservation.
 

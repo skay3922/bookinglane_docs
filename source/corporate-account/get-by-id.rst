@@ -1,5 +1,5 @@
-Get Corporate Account By Id
-=============================
+Find a corporate account by ID
+==============================
 
 This endpoint retrieves the details of a specific corporate account.
 
