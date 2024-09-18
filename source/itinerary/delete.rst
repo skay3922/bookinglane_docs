@@ -16,40 +16,16 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
-
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+   DELETE /api/v1/external/delete-itinerary/{id}
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
+      curl --location '/bookinglane-api/v1/external/delete-itinerary/{id}' \
       --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>''
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+``Status: 200``
+
+``Content-Type: application/json``

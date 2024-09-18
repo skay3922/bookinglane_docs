@@ -23,40 +23,32 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   PUT /api/v1/external/update-itinerary
 
 **Body**::
 
    {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
+      "eventName": "Corporate Meeting",
+      "startDate": "2024-12-12T00:00:00",
+      "endDate": "2024-12-12T00:00:00",
+      "profitMargin": 10
    }
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      curl --location '/api/v1/external/update-itinerary' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
+    --data '{
+        "id": 1
+        "eventName": "Corporate Meeting",
+        "startDate": "2024-12-12T00:00:00",
+        "endDate": "2024-12-12T00:00:00",
+        "profitMargin": 10
+    }'
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+``Status: 200``
+
+``Content-Type: application/json``

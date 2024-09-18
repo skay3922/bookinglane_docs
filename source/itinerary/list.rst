@@ -81,37 +81,16 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/get-itineraries?SearchParam=event
+   GET /api/v1/external/get-itineraries?SearchParam=event
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      curl --location '/api/v1/external/get-itineraries?SearchParam=event' \
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
-**Response**::
+**Response**
 
-    {
-        "id": 150190,
-        "number": "774376",
-        "eventName": "Corporate Meeting",
-        "startDate": "2024-12-12T00:00:00",
-        "endDate": "2024-12-12T00:00:00",
-        "profitMargin": 10.0,
-        "status": 0,
-        "netDue": 0.0,
-        "totalAmount": 0.0,
-        "reservationsHistory": []
-    }
+``Status: 200``
+
+``Content-Type: application/json``
 

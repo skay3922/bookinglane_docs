@@ -91,9 +91,7 @@ Example:
      curl --location '/api/v1/external/reservations' \
      --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
-**Response**
-
-.. code-block:: json
+**Response**::
 
     [
         {

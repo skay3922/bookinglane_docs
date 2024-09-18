@@ -36,10 +36,21 @@ Example:
 
 **Request**::
 
-      curl --location /api/v1/external/itinerary/150190' \
+      curl --location /api/v1/external/itinerary/{id}' \
       --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
-**Response**
+**Response**::
 
-      Status: 200
-      Content-Type: application/json
+    {
+        "id": 150190,
+        "number": "774376",
+        "eventName": "Corporate Meeting",
+        "startDate": "2024-12-12T00:00:00",
+        "endDate": "2024-12-12T00:00:00",
+        "profitMargin": 10.0,
+        "status": 0,
+        "netDue": 0.0,
+        "totalAmount": 0.0,
+        "reservationsHistory": []
+    }
+

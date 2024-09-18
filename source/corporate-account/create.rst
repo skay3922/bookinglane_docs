@@ -78,5 +78,6 @@ Example:
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+``Status: 200``
+
+``Content-Type: application/json``
