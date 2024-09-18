@@ -84,40 +84,86 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
-
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+   GET /api/v1/external/reservations
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+     curl --location '/api/v1/external/reservations' \
+     --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+.. code-block:: json
+
+    [
+        {
+            "id": 19069,
+            "bookingType": 3,
+            "isRoundTrip": false,
+            "returnStartDateTime": null,
+            "orderSum": 3312.97,
+            "totalSum": 3449.81,
+            "currencyCode": "USD",
+            "currencySymbol": "$",
+            "orderStartDateTime": "2024-07-31T00:55:00",
+            "passengersQuantity": 0,
+            "carInfo": null,
+            "orderAddressDetails": [
+                {
+                    "rideCheckPoint": "New York Marriott Marquis, Broadway, New York, NY, USA",
+                    "latitude": 40.7585862,
+                    "longitude": -73.9858202,
+                    "placeType": 0,
+                    "isReturnPoint": null,
+                    "placeId": "ChIJiVXoAFVYwokREqPijh-d8xg",
+                    "meetAndGreet": null,
+                    "specialInstructions": null,
+                    "landmark": null,
+                    "pointOnLocation": null,
+                    "city": null,
+                    "state": null,
+                    "postalCode": null,
+                    "additionalInfo": null
+                },
+                {
+                    "rideCheckPoint": "Chicago O'Hare International Airport (ORD), West Balmoral Avenue, Chicago, IL, USA",
+                    "latitude": 41.9802588,
+                    "longitude": -87.9089858,
+                    "placeType": 2,
+                    "isReturnPoint": null,
+                    "placeId": "ChIJ82J3aie0D4gRS61ZAgdHF1E",
+                    "meetAndGreet": null,
+                    "specialInstructions": null,
+                    "landmark": null,
+                    "pointOnLocation": null,
+                    "city": null,
+                    "state": null,
+                    "postalCode": null,
+                    "additionalInfo": null
+                }
+            ],
+            "returnOrderAddressDetails": null,
+            "orderNotes": null,
+            "hours": 0,
+            "greetClientInfo": null,
+            "isAirportPickupIncluded": false,
+            "isReturnAirportPickupIncluded": false,
+            "flightNumber": null,
+            "returnFlightNumber": null,
+            "airlines": null,
+            "returnAirlines": null,
+            "drivers": null,
+            "safetySeatCount": 0,
+            "boosterSeatCount": 0,
+            "luggageCount": 0,
+            "fromAppEnum": 6,
+            "driverCommissions": null,
+            "currentStatus": 1,
+            "isCustomerCancelRequested": false,
+            "paymentStatus": 2,
+            "orderStatus": 2,
+            "country2LetterCode": "US",
+            "utmSource": null
+        }
+        ...
+    ]

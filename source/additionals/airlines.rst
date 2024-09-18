@@ -45,41 +45,76 @@ Example:
 
 **Endpoint**::
 
-   GET /api/v1/external/airlines
-   
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+   GET /api/v1/external/airlines?search=air
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      curl --location '/api/v1/external/airlines' \
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+   .. code-block:: json
 
+    [
+        {
+            "id": 63,
+            "name": "Edelweiss Air",
+            "code": "WK",
+            "code3Letter": "EDW"
+        },
+        {
+            "id": 106,
+            "name": "Mango",
+            "code": "JE",
+            "code3Letter": "MNO"
+        },
+        {
+            "id": 2,
+            "name": "Aer Lingus",
+            "code": "EI",
+            "code3Letter": "EIN"
+        },
+        {
+            "id": 65,
+            "name": "El Al Israel Airlines",
+            "code": "LY",
+            "code3Letter": "ELY"
+        },
+        {
+            "id": 16,
+            "name": "Air Europa",
+            "code": "X5",
+            "code3Letter": null
+        },
+        {
+            "id": 1495,
+            "name": "Envoy Air",
+            "code": "MQ",
+            "code3Letter": "ENY"
+        },
+        {
+            "id": 70,
+            "name": "EVA Air",
+            "code": "BR",
+            "code3Letter": "EVA"
+        },
+        {
+            "id": 140,
+            "name": "Spirit Airlines",
+            "code": "NK",
+            "code3Letter": "NKS"
+        },
+        {
+            "id": 91,
+            "name": "Jet2.com",
+            "code": "LS",
+            "code3Letter": "EXS"
+        },
+        {
+            "id": 62,
+            "name": "easyJet Switzerland",
+            "code": "DS",
+            "code3Letter": "EZS"
+        }
+    ]

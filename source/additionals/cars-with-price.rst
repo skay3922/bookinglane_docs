@@ -1,7 +1,7 @@
 Car with price
 ==============
 
-### ``POST /api/v1/external/cars-with-price``
+``POST /api/v1/external/cars-with-price``
 
 This endpoint is used to retrieve information about cars with their prices for external use.
 
@@ -48,34 +48,97 @@ Example:
    
 **Body**::
 
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+    {
+        "country2LetterCode": "US",
+        "captcha": "",
+        "hours": 3,
+        "isGateMeeting": false,
+        "orderAddressDetails": [
+            {
+                "rideCheckPoint": "San Francisco International Airport (SFO), San Francisco, CA, USA",
+                "latitude": 37.6192526,
+                "longitude": -122.3815739,
+                "placeId": "ChIJVVVVVYx3j4ARP-3NGldc8qQ",
+                "placeType": 2,
+                "landmark": "San Francisco International Airport",
+                "city": "San Francisco",
+                "state": "CA",
+                "postalCode": "94128"
+            },
+            {
+                "rideCheckPoint": "183 Sierra Ct, Morgan Hill, CA 95037, USA",
+                "latitude": 37.1415128,
+                "longitude": -121.6650666,
+                "placeId": "EikxODMgU2llcnJhIEN0LCBNb3JnYW4gSGlsbCwgQ0EgOTUwMzcsIFVTQSIxEi8KFAoSCW8zkX3bII6AEZ_w8smZZOAIELcBKhQKEglXE3iB3CCOgBH7XHs9tKVpBA",
+                "placeType": 0,
+                "landmark": "183 Sierra Ct",
+                "city": "Morgan Hill",
+                "state": "CA",
+                "postalCode": "95037"
+            }
+        ],
+        "returnOrderAddressDetails": [],
+        "pickupDate": "12/12/2024 2:55 AM",
+        "returnDate": "",
+        "isRoundTrip": false,
+        "boosterSeatCount": 0,
+        "safetySeatCount": 0,
+        "page": 1,
+        "typeId": 1,
+        "bookingType": 2,
+        "passengersQuantity": 0,
+        "isAirportPickupIncluded": true
+    }
+
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+    
+    curl --location '/api/v1/external/cars-with-price' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
+    --data '{
+        "country2LetterCode": "US",
+        "captcha": "",
+        "hours": 3,
+        "isGateMeeting": false,
+        "orderAddressDetails": [
+            {
+                "rideCheckPoint": "San Francisco International Airport (SFO), San Francisco, CA, USA",
+                "latitude": 37.6192526,
+                "longitude": -122.3815739,
+                "placeId": "ChIJVVVVVYx3j4ARP-3NGldc8qQ",
+                "placeType": 2,
+                "landmark": "San Francisco International Airport",
+                "city": "San Francisco",
+                "state": "CA",
+                "postalCode": "94128"
+            },
+            {
+                "rideCheckPoint": "183 Sierra Ct, Morgan Hill, CA 95037, USA",
+                "latitude": 37.1415128,
+                "longitude": -121.6650666,
+                "placeId": "EikxODMgU2llcnJhIEN0LCBNb3JnYW4gSGlsbCwgQ0EgOTUwMzcsIFVTQSIxEi8KFAoSCW8zkX3bII6AEZ_w8smZZOAIELcBKhQKEglXE3iB3CCOgBH7XHs9tKVpBA",
+                "placeType": 0,
+                "landmark": "183 Sierra Ct",
+                "city": "Morgan Hill",
+                "state": "CA",
+                "postalCode": "95037"
+            }
+        ],
+        "returnOrderAddressDetails": [],
+        "pickupDate": "12/12/2024 2:55 AM",
+        "returnDate": "",
+        "isRoundTrip": false,
+        "boosterSeatCount": 0,
+        "safetySeatCount": 0,
+        "page": 1,
+        "typeId": 1,
+        "bookingType": 2,
+        "passengersQuantity": 0,
+        "isAirportPickupIncluded": true
+    }'
+
 
 **Response**
 

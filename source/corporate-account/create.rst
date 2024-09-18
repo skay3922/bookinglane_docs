@@ -36,34 +36,45 @@ Example:
 
    POST /api/v1/external/create-corporate-account
 
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+**Body form-data**
+    
++-------------------------------+--------------------------------------------------+
+| Field                         | Value                                            |
++===============================+==================================================+
+| Name                          | Company Name                                     |
++-------------------------------+--------------------------------------------------+
+| Discount                      | 10                                               |
++-------------------------------+--------------------------------------------------+
+| IsReservationPaymentRequired  | false                                            |
++-------------------------------+--------------------------------------------------+
+| Logo                          | image.png                                        |
++-------------------------------+--------------------------------------------------+
+| User.FirstName                | John                                             |
++-------------------------------+--------------------------------------------------+
+| User.LastName                 | Doe                                              |
++-------------------------------+--------------------------------------------------+
+| User.Email                    | email@email.com                                  |
++-------------------------------+--------------------------------------------------+
+| User.PhoneNumber              | +12345678901                                     |
++-------------------------------+--------------------------------------------------+
+| User.Role                     | Admin                                            |
++-------------------------------+--------------------------------------------------+
+| User.Password                 | Password123!                                     |
++-------------------------------+--------------------------------------------------+
 
 **Request**::
 
-      curl --location 'https://mgrdev2.bookinglane.com/api/v1/external/create-corporate-account' \
-      --form 'Name="Company000"' \
+      curl --location '/api/v1/external/create-corporate-account' \
+      --form 'Name="Company Name"' \
     --form 'Discount="10"' \
     --form 'IsReservationPaymentRequired="false"' \
-    --form 'Logo=@"/C:/Users/Qairat/Downloads/Default_two_cartoon_playing_funny_panda_1.jpg"' \
-    --form 'Logo=@"/Users/qairat/Desktop/Screenshot 2024-08-23 at 8.43.19 PM.png"' \
-    --form 'User.FirstName="Qairat"' \
-    --form 'User.LastName="Soodombaev"' \
-    --form 'User.Email="skay39234@gmail.com"' \
-    --form 'User.PhoneNumber="+996500150110"' \
+    --form 'Logo=@"/Image.png"' \
+    --form 'User.FirstName="John"' \
+    --form 'User.LastName="Doe"' \
+    --form 'User.Email="email@email.com"' \
+    --form 'User.PhoneNumber="+12345678901"' \
     --form 'User.Role="Admin"' \
-    --form 'User.Password="Company123\!"'
+    --form 'User.Password="Password123!"'
 
 **Response**
 

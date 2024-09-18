@@ -154,40 +154,207 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
-
-**Body**::
-
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+   GET api/v1/external/reservation/{id}
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+      curl --location '/api/v1/external/reservation/{id}' \
+      --header 'Authorization: Bearer <YOUR_SECRET_KEY>'
 
 **Response**
 
-      Status: 200
-      Content-Type: application/json
+.. code-block:: json
+
+    {
+        "isCustomerCancelRequested": false,
+        "paymentMethods": null,
+        "tripRouteImages": [],
+        "changedFields": null,
+        "id": 19483,
+        "orderSum": 3310.96,
+        "totalSum": 3447.72,
+        "transactionFee": 136.76,
+        "tipsAmount": 0.0,
+        "waitingFee": 0.0,
+        "orderStartDateTime": "2024-07-31T00:55:00",
+        "isRoundTrip": false,
+        "returnStartDateTime": null,
+        "totalOrderMileage": 806.6506,
+        "passengersQuantity": 0,
+        "carFK": 631,
+        "paymentStatus": 2,
+        "paymentMethod": null,
+        "paymentId": 0,
+        "currencyCode": "USD",
+        "currencySymbol": "$",
+        "country2LetterCode": "US",
+        "paymentIndicatorStatus": 0,
+        "carInfo": {
+            "id": 631,
+            "typeId": 1,
+            "type": "Sedan",
+            "make": "Mercedes-Benz",
+            "model": "E350",
+            "licensePlate": "n/a",
+            "color": "Black",
+            "country2LetterCode": null,
+            "currencyCode": null,
+            "currencySymbol": null,
+            "imageUrls": [
+                {
+                    "id": 330,
+                    "path": "https://bookinglane-images.S3.us-east-2.amazonaws.com/f2721164-beca-49bb-854b-35181264cb72"
+                }
+            ],
+            "price": 0.0,
+            "greetAndMeetPrice": 0.0,
+            "safetySeatPrice": 0.0,
+            "boosterSeatPrice": 0.0,
+            "isBoosterSeatsExist": false,
+            "isSafetySeatsExist": false,
+            "mileCost": null,
+            "cancelationFees": [],
+            "capacity": 3,
+            "tripTime": 0,
+            "tripMileage": 0.0,
+            "isIncluded": false
+        },
+        "orderAddressDetails": [
+            {
+                "rideCheckPoint": "New York Marriott Marquis, Broadway, New York, NY, USA",
+                "latitude": 40.7585862,
+                "longitude": -73.9858202,
+                "placeType": 0,
+                "isReturnPoint": null,
+                "placeId": "ChIJiVXoAFVYwokREqPijh-d8xg",
+                "meetAndGreet": null,
+                "specialInstructions": null,
+                "landmark": null,
+                "pointOnLocation": null,
+                "city": null,
+                "state": null,
+                "postalCode": null,
+                "additionalInfo": null
+            },
+            {
+                "rideCheckPoint": "Chicago O'Hare International Airport (ORD), West Balmoral Avenue, Chicago, IL, USA",
+                "latitude": 41.9802588,
+                "longitude": -87.9089858,
+                "placeType": 2,
+                "isReturnPoint": null,
+                "placeId": "ChIJ82J3aie0D4gRS61ZAgdHF1E",
+                "meetAndGreet": null,
+                "specialInstructions": null,
+                "landmark": null,
+                "pointOnLocation": null,
+                "city": null,
+                "state": null,
+                "postalCode": null,
+                "additionalInfo": null
+            }
+        ],
+        "returnOrderAddressDetails": null,
+        "orderShareEmailHistory": [],
+        "partnerShareHistory": null,
+        "automaticallySharedHistory": null,
+        "transferedCompanyPartnerShareHistory": null,
+        "isAirportPickupIncluded": false,
+        "isReturnAirportPickupIncluded": false,
+        "flightNumber": null,
+        "returnFlightNumber": null,
+        "orderNotes": null,
+        "hours": 0,
+        "invoiceId": 0,
+        "companyName": null,
+        "createdByCompanyId": 1,
+        "luggageCount": 0,
+        "safetySeatCount": 0,
+        "boosterSeatCount": 0,
+        "safetySeatAmount": 0.0,
+        "boosterSeatAmount": 0.0,
+        "orderType": 3,
+        "airlines": null,
+        "returnAirlines": null,
+        "createdBy": {
+            "id": 1,
+            "companyName": "Company 0 ",
+            "email": "bookinglane.kg@gmail.com",
+            "phoneNumber": "+19292897825",
+            "rating": 5.0,
+            "companyLogo": "https://bookinglane-images.S3.us-east-2.amazonaws.com/9f63c6b2-2ff8-4d9e-98ab-61187b8803d9",
+            "state": "California",
+            "city": "Fremont",
+            "country": "US",
+            "reviewsCount": 1,
+            "fleetCount": 0,
+            "isGNetCompany": false,
+            "fullNameOwnerCompany": null,
+            "companyPartnerCards": null,
+            "cardNickName": null,
+            "addressLine": null,
+            "cardLast4": null
+        },
+        "bookingType": 3,
+        "currentStatus": 1,
+        "gNetQuoteStatus": null,
+        "amendmentStatus": null,
+        "gNetPreferredVehicleType": null,
+        "gNetPreferredVehicleTypeId": null,
+        "clientInfo": {
+            "id": 4364,
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@gmail.com",
+            "phoneNumber": "+14564564564",
+            "description": null,
+            "cardLast4": "4242",
+            "globalUserId": "xpyYP1hxuJVUxYL4ufSHdQ8LOtW2",
+            "iconColor": null,
+            "passengerId": 0
+        },
+        "greetClientInfo": {
+            "id": 4733,
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@gmail.com",
+            "phoneNumber": "+14564564564",
+            "description": null,
+            "cardLast4": null,
+            "globalUserId": null,
+            "iconColor": null,
+            "passengerId": 4733
+        },
+        "orderStatus": 2,
+        "offer": null,
+        "isModified": false,
+        "isShared": false,
+        "showReturnDate": null,
+        "drivers": {
+            "id": 0,
+            "firstName": null,
+            "lastName": null,
+            "email": null,
+            "phoneNumber": null,
+            "companyName": null,
+            "profilePhoto": null,
+            "todayReservationCount": 0,
+            "nextReservationInMilliseconds": null,
+            "nextReservationDateTime": null,
+            "isApproved": false
+        },
+        "driverCommissions": null,
+        "providerType": "BOOKINGLANE",
+        "additionalFee": {
+            "id": 0,
+            "amount": 3310.96,
+            "total": 3310.96,
+            "newGratuity": null,
+            "items": []
+        },
+        "promoDiscount": null,
+        "corporateDiscount": null,
+        "flightReservationId": null,
+        "flightReservation": null,
+        "feeImages": null
+    }
+

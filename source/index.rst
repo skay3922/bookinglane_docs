@@ -3,6 +3,14 @@ Get started
 
 Create an corporate account and learn how to start using API Bookinglane.
 
+Development server endpoint:
+
+``https://mgrdev2.bookinglane.com``
+
+Production server endpoint:
+
+``https://mgr.bookinglane.com``
+
 .. toctree::
     :caption: Corporate account
     :titlesonly:
@@ -21,7 +29,6 @@ Create an corporate account and learn how to start using API Bookinglane.
     reservation/update
     reservation/detail
     reservation/list
-    reservation/delete
     reservation/cancel
 
 .. toctree::

@@ -54,38 +54,138 @@ Example:
 
 **Endpoint**::
 
-   POST /api/v1/external/top-up-balance
+   POST /api/v1/external/reservation
 
 **Body**::
 
-   {
-       "CardId": "",
-       "CardNumber": "4242424242424242",
-       "NameOnCard": "John Doe",
-       "ExpirationDate": "2025-12-31T00:00:00",
-       "CVV": "123",
-       "Nickname": "Personal Card",
-       "IsMain": true,
-       "AddressZip": "60604",
-       "Balance": 1000
-   }
+    {
+        "country2LetterCode": "US",
+        "utmSource": "/booking-form/",
+        "departure": {
+            "StartAt": "12/12/2024  12:55 AM",
+            "Addresses": [
+                {
+                    "rideCheckPoint": "New York Marriott Marquis, Broadway, New York, NY, USA",
+                    "latitude": 40.7585862,
+                    "longitude": -73.98582019999999,
+                    "placeId": "ChIJiVXoAFVYwokREqPijh-d8xg",
+                    "placeType": 0
+                },
+                {
+                    "rideCheckPoint": "Chicago O'Hare International Airport (ORD), West Balmoral Avenue, Chicago, IL, USA",
+                    "latitude": 41.9802588,
+                    "longitude": -87.9089858,
+                    "placeId": "ChIJ82J3aie0D4gRS61ZAgdHF1E",
+                    "placeType": 2
+                }
+            ]
+        },
+        "return": null,
+        "returnOrderAddressDetails": [],
+        "bookingType": 3,
+        "passengersQuantity": 2,
+        "isRoundTrip": false,
+        "orderStartDateTime": "12/12/2024  12:55 AM",
+        "returnStartDateTime": "",
+        "VehicleDetail": {
+            "id": 631
+        },
+        "hourly": false,
+        "hours": 0,
+        "paymentInfo": {
+            "cardId": "",
+            "gclid": ""
+        },
+        "PassengerDetail": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@gmail.com",
+            "phoneNumber": "+12345678901",
+            "id": 1
+        },
+        "isAirportPickupIncluded": false,
+        "flightNumber": 0,
+        "airlines": {
+            "id": 0
+        },
+        "luggageCount": 0,
+        "boosterSeatCount": 0,
+        "safetySeatCount": 0,
+        "orderNotes": "",
+        "orderSum": "401.53",
+        "orderType": 3,
+        "page": 1,
+        "typeId": 0,
+        "captcha": ""
+    }
+
 
 **Request**::
 
-      curl --location '/bookinglane-api/v1/external/top-up-balance' \
-      --header 'Content-Type: application/json' \
-      --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
-      --data '{
-         "CardId": "",
-         "CardNumber": "4242424242424242",
-         "NameOnCard": "John Doe",
-         "ExpirationDate": "2025-12-31T00:00:00",
-         "CVV": "123",
-         "Nickname": "Personal Card",
-         "IsMain": true,
-         "AddressZip": "60604",
-         "Balance": 1000
-      }'
+    curl --location '/api/v1/external/reservation' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer <YOUR_SECRET_KEY>' \
+    --data-raw '{
+        "country2LetterCode": "US",
+        "utmSource": "/booking-form/",
+        "departure": {
+            "StartAt": "12/12/2024  12:55 AM",
+            "Addresses": [
+                {
+                    "rideCheckPoint": "New York Marriott Marquis, Broadway, New York, NY, USA",
+                    "latitude": 40.7585862,
+                    "longitude": -73.98582019999999,
+                    "placeId": "ChIJiVXoAFVYwokREqPijh-d8xg",
+                    "placeType": 0
+                },
+                {
+                    "rideCheckPoint": "Chicago O'\''Hare International Airport (ORD), West Balmoral Avenue, Chicago, IL, USA",
+                    "latitude": 41.9802588,
+                    "longitude": -87.9089858,
+                    "placeId": "ChIJ82J3aie0D4gRS61ZAgdHF1E",
+                    "placeType": 2
+                }
+            ]
+        },
+        "return": null,
+        "returnOrderAddressDetails": [],
+        "bookingType": 3,
+        "passengersQuantity": 2,
+        "isRoundTrip": false,
+        "orderStartDateTime": "12/12/2024  12:55 AM",
+        "returnStartDateTime": "",
+        "VehicleDetail": {
+            "id": 631
+        },
+        "hourly": false,
+        "hours": 0,
+        "paymentInfo": {
+            "cardId": "",
+            "gclid": ""
+        },
+        "PassengerDetail": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "john@gmail.com",
+            "phoneNumber": "+12345678901",
+            "id": 1
+        },
+        "isAirportPickupIncluded": false,
+        "flightNumber": 0,
+        "airlines": {
+            "id": 0
+        },
+        "luggageCount": 0,
+        "boosterSeatCount": 0,
+        "safetySeatCount": 0,
+        "orderNotes": "",
+        "orderSum": "401.53",
+        "orderType": 3,
+        "page": 1,
+        "typeId": 0,
+        "captcha": ""
+    }'
+
 
 **Response**
 
