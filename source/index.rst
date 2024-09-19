@@ -42,7 +42,7 @@ Production server endpoint:
     itinerary/delete
 
 .. toctree::
-    :caption: Reservation with itinerary
+    :caption: Reservation with an itinerary
     :titlesonly:
 
     reservation-with-itinerary/create 

@@ -1,5 +1,5 @@
-Update itinerary
-================
+Update an itinerary
+===================
 
 This HTTP POST request is used to update an itinerary in the external API. The request should include the following parameters in the raw request body:
 

@@ -1,5 +1,5 @@
-Create a reservation with itinerary
-===================================
+Create a reservation with an itinerary
+======================================
 
 
 This endpoint allows you to make a reservation with itinerary details.
